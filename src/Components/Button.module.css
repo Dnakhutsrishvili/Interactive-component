@@ -1,0 +1,34 @@
+.btnContainer {
+  height: 4.2rem;
+  width: 4.2rem;
+  background: #262e38;
+  border-radius: 50%;
+}
+.btn {
+  height: 4.2rem;
+  width: 4.2rem;
+  border-radius: 50%;
+  background: #262e38;
+  border: none;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  /* identical to box height, or 171% */
+
+  text-align: center;
+  letter-spacing: 0.175px;
+
+  /* Medium Gray */
+
+  color: #7c8798;
+}
+.btn:hover {
+  background: #fc7614;
+  color: #ffffff;
+}
+.btn:focus {
+  background: #7c8798;
+  color: #ffffff;
+}

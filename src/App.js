@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Rate from "./Components/Rate";
+import Submited from "./Components/Submited.js";
 
 function App() {
+  const [number, setNumber] = useState(0);
+  const [submitHendeler, setsubmitHendeler] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="font-face-gm flex">
+        {number > 0 && submitHendeler ? (
+          <Submited num={number}></Submited>
+        ) : (
+          <Rate
+            setState={setNumber}
+            state={number}
+            hendeler={setsubmitHendeler}
+          ></Rate>
+        )}
+      </div>
+    </>
   );
 }
 
